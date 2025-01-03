@@ -7,17 +7,11 @@ let myArray = [
   'World of Warcraft', 
   'Final Fantasy', 
   'Dragon Age', 
-  'Baldurs Gate 3'
+  'Baldurs Gate 3',
+  'Windblown'
   
   
   
-];
-let myArraytwo =[
-{ name: 'Tor', age 5, isPresent: false},
-{ name: 'Hans', age 25, isPresent: true},
-{ name: 'Alex', age 15, isPresent: true},
-{ name: 'Jørgen', age 35, isPresent: true},
-{ name: 'Emil', age 14, isPresent: false}
 ];
 
 
@@ -41,6 +35,7 @@ console.log(removedFirstGame);
 
 
 myArray.unshift('Pilars of Eternity');
+myArray.unshift('Windblown')
 console.log(myArray);
 
 
@@ -48,3 +43,27 @@ console.log(myArray);
 
 
 console.log(myArray);
+
+
+let people = [
+{ name: 'Tor', age 5, isPresent: false},
+{ name: 'Hans', age 25, isPresent: true},
+{ name: 'Alex', age 15, isPresent: true},
+{ name: 'Jørgen', age 35, isPresent: true},
+{ name: 'Emil', age 14, isPresent: false}
+{ name: 'Nils', age: 30, isPresent: false}
+];
+
+console.log(JSON.stringify(people));
+
+const adults = people.filter(person => person.age > 20);
+console.log(adults);
+
+const people = people.map(person => person.age);
+console.log(people);
+
+const child = people.some(person => people.age < 18);
+const.log(child)
+
+const allPresent = people.every(person => person.isPresent);
+console.log(allPresent);
